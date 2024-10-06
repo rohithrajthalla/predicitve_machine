@@ -1,11 +1,6 @@
 import os
 import subprocess
 
-# Force installation of xgboost
-try:
-    import xgboost
-except ModuleNotFoundError:
-    subprocess.check_call(['pip', 'install', 'xgboost'])
 
 import xgboost as xgb
 import pickle
