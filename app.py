@@ -1,6 +1,16 @@
-import streamlit as st
-import pandas as pd
+import os
+import subprocess
+
+# Force installation of xgboost
+try:
+    import xgboost
+except ModuleNotFoundError:
+    subprocess.check_call(['pip', 'install', 'xgboost'])
+
+import xgboost as xgb
 import pickle
+import pandas as pd
+import streamlit as st
 
 # Title
 st.title("Predictive Maintenance Web App")
